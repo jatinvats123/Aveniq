@@ -10,6 +10,7 @@
   "scripts": {
     "dev": "npx nodemon server.js",
     "start": "node server.js",
+    "seed:demo": "node scripts/seed-demo.js",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "format": "prettier --write .",
