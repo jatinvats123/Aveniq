@@ -139,10 +139,11 @@ const Home = () => {
           autoPlay
           muted
           playsInline
+          preload="metadata"
           poster="/register-bg.png"
           className="absolute inset-0 h-full w-full object-cover object-top"
         >
-          <source src="/avnique%20video%20for%20login%20page.mp4" type="video/mp4" />
+          <source src="/hero-720.mp4" type="video/mp4" />
         </video>
 
         {/* Soft dark overlay — just enough depth */}
