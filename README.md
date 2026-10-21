@@ -2,7 +2,7 @@
 
 A full-stack e-commerce marketplace where sellers list products with variants and buyers check out through Razorpay.
 
-[![CI](https://github.com/jatinvats123/SNITCH-ECOM/actions/workflows/ci.yml/badge.svg)](https://github.com/jatinvats123/SNITCH-ECOM/actions/workflows/ci.yml)
+[![CI](https://github.com/jatinvats123/Aveniq/actions/workflows/ci.yml/badge.svg)](https://github.com/jatinvats123/Aveniq/actions/workflows/ci.yml)
 ![Node](https://img.shields.io/badge/node-%3E%3D20-3c873a)
 ![License](https://img.shields.io/badge/license-MIT-blue)
 
@@ -142,8 +142,8 @@ aveniq/
 **Prerequisites:** Node.js 20+, npm 10+, and either Docker or a MongoDB replica set (order creation uses a transaction, which requires a replica set — MongoDB Atlas is one).
 
 ```bash
-git clone https://github.com/jatinvats123/SNITCH-ECOM.git
-cd SNITCH-ECOM
+git clone https://github.com/jatinvats123/Aveniq.git
+cd Aveniq
 ```
 
 ### Option A — Docker (recommended)
