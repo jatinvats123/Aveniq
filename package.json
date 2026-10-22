@@ -19,6 +19,6 @@
   },
   "devDependencies": {
     "concurrently": "^10.0.6",
-    "prettier": "^3.9.6"
+    "prettier": "^3.9.10"
   }
 }
