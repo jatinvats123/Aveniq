@@ -10,6 +10,39 @@ A full-stack e-commerce marketplace where sellers list products with variants an
 
 ---
 
+## Try it
+
+[Log in](https://aveniq-sooty.vercel.app/login) with a demo account to try both sides of the marketplace without registering:
+
+<!-- Owner: replace the two password placeholders with the values passed to `npm run seed:demo` (see "Creating the demo accounts" below). -->
+
+| Role   | Email                | Password                 |
+| ------ | -------------------- | ------------------------ |
+| Buyer  | `buyer@aveniq.demo`  | `<demo buyer password>`  |
+| Seller | `seller@aveniq.demo` | `<demo seller password>` |
+
+- **Buyer:** open a product, pick a size or colour, add it to the cart and pay at checkout. The order then appears under Orders.
+- **Seller:** the dashboard lists the demo seller's products, and an order shows up there once a buyer pays for one of them.
+
+Checkout runs in **Razorpay test mode**, so no real money moves. Pay with one of Razorpay's [published test cards](https://razorpay.com/docs/payments/payments/test-card-details/), for example the Visa debit card `4100 2800 0000 1007` with any future expiry date and any CVV, then choose **Success** on the mock bank page. UPI works too, with Razorpay's [test UPI ID](https://razorpay.com/docs/payments/payments/test-upi-details/) `success@razorpay`.
+
+The API runs on a free hosting tier, so the first request after a quiet spell can take about 30 seconds while it wakes up.
+
+<details>
+<summary>Creating the demo accounts</summary>
+
+`backend/scripts/seed-demo.js` creates both accounts and three products for the demo seller. It is safe to run against the production database: it never touches other users or products, and running it twice changes nothing. Each run resets the demo passwords to the values you pass and recreates any demo product a visitor deleted.
+
+```bash
+cd backend
+MONGO_URI="<production connection string>" \
+DEMO_BUYER_PASSWORD="<at least 8 characters>" \
+DEMO_SELLER_PASSWORD="<at least 8 characters>" \
+npm run seed:demo
+```
+
+</details>
+
 ## Overview
 
 Aveniq is a MERN marketplace with two distinct user journeys. Sellers register, list products with multiple variants (size, colour, price) and up to seven images per product served from a CDN. Buyers browse the catalog, add specific variants to a cart, and complete payment through Razorpay with server-side signature verification.
